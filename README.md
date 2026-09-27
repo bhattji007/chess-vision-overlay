@@ -39,7 +39,7 @@ starting position is seen, and can be forced with **I am playing → White / Bla
 
 | File | Purpose |
 | --- | --- |
-| `manifest.json` | MV3 manifest. `<all_urls>` host permission is needed for `captureVisibleTab` to work without a click on every page load. |
+| `manifest.json` | MV3 manifest. Host permissions cover only chess.com and lichess (where the overlay auto-runs). Elsewhere, opening the popup grants `activeTab`, which is enough for `captureVisibleTab` on that tab. |
 | `background.js` | Service worker. Only job: take the tab screenshot for the content script. |
 | `content.js` | Board detection, screenshot → cell features → template matching, DOM reader, orientation, overlay drawing, region picker. |
 | `engine.js` | Legal-move generator over a screen-oriented 8×8 board (checks, pins, castling). No en passant (needs move history). |
