@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Chess Vision Overlay",
   "version": "0.1.0",
-  "description": "Reads the chess board on screen and draws faint lines showing every legal move for you and your opponent, plus hanging-piece warnings.",
+  "description": "Reads the chess board on screen and draws faint lines showing every legal move for you and your opponent, plus hanging-piece alerts.",
   "permissions": ["storage", "activeTab", "scripting", "tabs"],
   "host_permissions": ["<all_urls>"],
   "background": { "service_worker": "background.js" },
